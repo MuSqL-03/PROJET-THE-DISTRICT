@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tous les Plats</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="sryle.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand me-3" href="#">
+      <img src="logo_transparent.png" alt="Logo" style="width:120px; object-fit: cover;" class="rounded-pill">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="accueil.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Catégories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="plats.html">Plats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="search-container">
+    <img src="fosyyyy.jpg" alt="Background Image" style="height: 650px;" >
+</div>
+
+<main class="container my-5">
+  <h2>Tous les Plats </h2>
+  <hr>
+
+  <!-- Dishes Set 1 -->
+  <div id="dish-set-1" class="dish-set active">
+    <h3>Burgers</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="burger_cat.jpg" class="card-img-top" alt="Burger 1">
+          <div class="card-body">
+            <h5 class="card-title">Classic Burger</h5>
+            <p class="card-text">A delicious classic burger with fresh lettuce, tomatoes, and cheese.</p>
+            <a href="commande.html?name=Classic%20Burger&description=A%20delicious%20classic%20burger%20with%20fresh%20lettuce,%20tomatoes,%20and%20cheese.&img=burger_cat.jpg" class="btn btn-primary order-button">Commander</a>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="cheesburger.jpg" class="card-img-top" alt="Burger 2">
+          <div class="card-body">
+            <h5 class="card-title">Cheese Burger</h5>
+            <p class="card-text">A tasty cheese burger topped with cheddar cheese and caramelized onions.</p>
+            <a href="commande.html?name=Cheese%20Burger&description=A%20tasty%20cheese%20burger%20topped%20with%20cheddar%20cheese%20and%20caramelized%20onions.&img=cheesburger.jpg" class="btn btn-primary order-button">Commander</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="hamburger.jpg" class="card-img-top" alt="Burger 3">
+          <div class="card-body">
+            <h5 class="card-title">Bacon Burger</h5>
+            <p class="card-text">A savory bacon burger with crispy bacon and smoky BBQ sauce.</p>
+            <a href="commande.html?name=Bacon%20Burger&description=A%20savory%20bacon%20burger%20with%20crispy%20bacon%20and%20smoky%20BBQ%20sauce.&img=hamburger.jpg" class="btn btn-primary order-button">Commander</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dishes Set 2 -->
+  <div id="dish-set-2" class="dish-set">
+    <h3>Pasta</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="pasta_cat.jpg" class="card-img-top" alt="Pasta 1">
+          <div class="card-body">
+            <h5 class="card-title">Spaghetti Bolognese</h5>
+            <p class="card-text">Classic Italian pasta with rich bolognese sauce.</p>
+            <a href="commande.html?name=Spaghetti%20Bolognese&description=Classic%20Italian%20pasta%20with%20rich%20bolognese%20sauce.&img=pasta_cat.jpg" class="btn btn-primary order-button">Commander</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="spaghetti-legumes.jpg" class="card-img-top" alt="Pasta 2">
+          <div class="card-body">
+            <h5 class="card-title">Fettuccine Alfredo</h5>
+            <p class="card-text">Creamy alfredo sauce served with fettuccine pasta.</p>
+            <a href="commande.html?name=Fettuccine%20Alfredo&description=Creamy%20alfredo%20sauce%20served%20with%20fettuccine%20pasta.&img=spaghetti-legumes.jpg" class="btn btn-primary order-button">Commander</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dish-card">
+          <img src="images.jpeg" class="card-img-top" alt="Pasta 3">
+          <div class="card-body">
+            <h5 class="card-title">Pesto Pasta</h5>
+            <p class="card-text">Fresh basil pesto served with penne pasta.</p>
+            <a href="commande.html?name=Pesto%20Pasta&description=Fresh%20basil%20pesto%20served%20with%20penne%20pasta.&img=images.jpeg" class="btn btn-primary order-button">Commander</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mt-4">
+    <button id="prev-button" class="btn btn-primary" onclick="changeSet(-1)" disabled>Previous</button>
+    <button id="next-button" class="btn btn-primary" onclick="changeSet(1)">Next</button>
+  </div>
+</main>
+
+<footer class="bg-dark text-center py-3">
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p>© 2023 Nom du Site. Tous droits réservés.</p>
+</footer>
+
+<script>
+  let currentSet = 1;
+  const totalSets = 2;
+
+  function changeSet(direction) {
+    document.getElementById(`dish-set-${currentSet}`).classList.remove('active');
+    currentSet += direction;
+    document.getElementById(`dish-set-${currentSet}`).classList.add('active');
+    
+    document.getElementById('prev-button').disabled = currentSet === 1;
+    document.getElementById('next-button').disabled = currentSet === totalSets;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The District</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="sryle.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand me-3" href="#">
+      <img src="logo_transparent.png" alt="Logo" style="width:120px; object-fit: cover;" class="rounded-pill">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="accueil.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Catégorie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="plats.html">Plats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="search-container">
+  <img src="bg2.jpeg" alt="Background Image" style="height: 650px;" >
+  
+</div>
+<main class="container my-5">
+    <h2>Catégories</h2><br>
+    <hr>
+    <div class="row" id="category-container">
+      <div class="col-md-4 mb-4 d-none" id="card-1">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="burger_cat.jpg" class="card-img-top" alt="Burger"></a>
+          <div class="card-body">
+            <h5 class="card-title">Burger</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-none" id="card-2">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="pasta_cat.jpg" class="card-img-top" alt="Pasta"></a>
+          <div class="card-body">
+            <h5 class="card-title">Pasta</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-none" id="card-3">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="pizza_cat.jpg" class="card-img-top" alt="Pizza"></a>
+          <div class="card-body">
+            <h5 class="card-title">Pizza</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-none" id="card-4">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="salade_cat.jpg" class="card-img-top" alt="Salad"></a>
+          <div class="card-body">
+            <h5 class="card-title">Salad</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-none" id="card-5">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="sandwich_cat.jpg" class="card-img-top" alt="Sandwich"></a>
+          <div class="card-body">
+            <h5 class="card-title">Sandwich</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-none" id="card-6">
+        <div class="card category-card">
+          <a href="tplats.html"><img src="wrap_cat.jpg" class="card-img-top" alt="Wrap"></a>
+          <div class="card-body">
+            <h5 class="card-title">Wrap</h5>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4 mb-4 d-none" id="card-1">
+          <div class="card category-card">
+            <a href="tplats.html"><img src="buffalo-chicken.webp" class="card-img-top" alt="Burger"></a>
+            <div class="card-body">
+              <h5 class="card-title">Bufalo</h5>
+            </div>
+          </div>
+        </div>
+        
+            <div class="col-md-4 mb-4 d-none" id="card-1">
+              <div class="card category-card">
+                <a href="tplats.html"><img src="courgettes_farcies.jpg" class="card-img-top" alt="Burger"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Courgettes_farcies</h5>
+                </div>
+              </div>
+            </div>
+            
+                <div class="col-md-4 mb-4 d-none" id="card-1">
+                  <div class="card category-card">
+                    <a href="tplats.html"><img src="cheesburger.jpg" class="card-img-top" alt="Burger"></a>
+                    <div class="card-body">
+                      <h5 class="card-title">Chees Burger</h5>
+                    </div>
+                  </div>
+                </div>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="d-flex justify-content-between my-4">
+      <a class="btn btn-primary" id="prev-btn"  role="button" aria-label="Previous" disabled>Previous</a>
+      <a class="btn btn-primary" id="next-btn" role="button" aria-label="Next">Next</a>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const cards = Array.from(document.querySelectorAll('#category-container .col-md-4'));
+      const numCardsToShow = 3;
+      let currentStartIndex = 0;
+      
+      function showCards(startIndex) {
+        cards.forEach((card, index) => {
+          card.classList.toggle('d-none', index < startIndex || index >= startIndex + numCardsToShow);
+        });
+        document.getElementById('prev-btn').disabled = startIndex === 0;
+        document.getElementById('next-btn').disabled = startIndex + numCardsToShow >= cards.length;
+      }
+      
+      document.getElementById('next-btn').addEventListener('click', () => {
+        if (currentStartIndex + numCardsToShow < cards.length) {
+          currentStartIndex += numCardsToShow;
+          showCards(currentStartIndex);
+        }
+      });
+      
+      document.getElementById('prev-btn').addEventListener('click', () => {
+        if (currentStartIndex - numCardsToShow >= 0) {
+          currentStartIndex -= numCardsToShow;
+          showCards(currentStartIndex);
+        }
+      });
+    
+      // Initially show the first set of cards
+      showCards(currentStartIndex);
+    });
+    </script>
+    
+    <footer class="bg-dark text-center py-3">
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>© 2023 Nom du Site. Tous droits réservés.</p>
+      </footer>
+      
+      </body>
+      </html>
+         

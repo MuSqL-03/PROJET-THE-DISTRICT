@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Passer une commande</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="sryle.css">
+  <script>
+    function showAlert(event) {
+      event.preventDefault(); // Prevent the default form submission
+      alert("Votre commande a été enregistrée !");
+      
+      // Optionally, you can manually submit the form here if needed:
+      // document.querySelector('.order-form').submit();
+    }
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand me-3" href="#">
+      <img src="logo_transparent.png" alt="Logo" style="width:120px; object-fit: cover;" class="rounded-pill">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="accueil.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Catégories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="plats.html">Plats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h2>Passer une commande</h2>
+  <hr>
+
+  <form class="order-form" onsubmit="showAlert(event)">
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <div class="card dish-card text-center">
+          <img id="dish-img" src="" class="card-img-top mx-auto" alt="Dish Image">
+          <div class="card-body">
+            <h5 id="dish-title" class="card-title"></h5>
+            <p id="dish-description" class="card-text"></p>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantité</label>
+              <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Informations Personnelles</h3>
+    <div class="mb-3">
+      <label for="first-name" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="first-name" name="first-name" required>
+    </div>
+    <div class="mb-3">
+      <label for="last-name" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="last-name" name="last-name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Téléphone</label>
+      <input type="tel" class="form-control" id="phone" name="phone" required>
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Votre Addresse</label>
+      <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</main>
+
+<footer class="bg-dark text-center py-3">
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p class="text-light">© 2023 Nom du Site. Tous droits réservés.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const description = urlParams.get('description');
+    const img = urlParams.get('img');
+
+    if (name && description && img) {
+      document.getElementById('dish-title').textContent = name;
+      document.getElementById('dish-description').textContent = description;
+      document.getElementById('dish-img').src = img;
+    } else {
+      alert("Invalid dish data!");
+    }
+  });
+</script>
+
+</body>
+</html>

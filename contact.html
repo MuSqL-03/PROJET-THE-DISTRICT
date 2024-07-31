@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contactez-Nous</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="sryle.css"></head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand me-3" href="#">
+      <img src="logo_transparent.png" alt="Logo" style="width:120px; object-fit: cover;" class="rounded-pill">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="accueil.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Catégories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="plats.html">Plats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h2>Contactez-Nous</h2>
+  <hr>
+  
+  <form id="contactForm" action="submit_order.php" method="post" onsubmit="return handleFormSubmit()">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="firstName" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Votre prénom" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="lastName" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Votre nom" required>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Téléphone</label>
+      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Votre Demande</label>
+      <textarea class="form-control" id="message" name="message" rows="4" placeholder="Décrivez votre demande" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</main>
+
+<footer class="bg-dark text-center py-3">
+  <div class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p class="text-light">© 2023 Nom du Site. Tous droits réservés.</p>
+</footer>
+
+<script>
+  function handleFormSubmit() {
+    // Show an alert when the form is submitted
+    alert("Votre commande a été enregistrée !");
+    // Optionally, you could also redirect or handle form submission differently here
+    return false; // Return true to allow form submission to proceed
+  }
+</script>
+
+</body>
+</html>
